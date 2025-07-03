@@ -1,6 +1,8 @@
 
-1. What is a Library in your own words? A library is a colection of modules
-2. What command do we use to start using a library in our Python file? the import command
+1. What is a Library in your own words? 
+A library is a colection of modules
+2. What command do we use to start using a library in our Python file? 
+the import command
 3. List at least 3 built-in Python libraries?
 random 
 webbrowser
