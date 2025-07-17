@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <script src="https://kit.fontawesome.com/3fc8520617.js" crossorigin="anonymous"></script></head>
 <body>
     <div id="header">
         <div class = "container">
@@ -34,26 +34,83 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>information about me</p>
+                    <p>My name is Kamari Revels, and I am a Hidden Genius student with a passion for music, reading, and coding. Music is one of my favorite ways to express myself and unwind. I especially love R\&B for its smooth beats and deep, emotional lyrics. My favorite artist is SZA—her unique voice and honest storytelling always inspire me. Just like music, reading lets me escape into different worlds and expand my imagination. Whether it’s a novel or an article, I enjoy learning new things and seeing life from different perspectives. Coding is another big part of who I am. I like the challenge of solving problems and creating something out of nothing. It gives me a sense of accomplishment and helps me think in new, creative ways. Together, music, reading, and coding all help me grow and stay inspired every day.
+</p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick=" opentab('skils')">Skills</p>
+                        <p class="tab-links" onclick=" opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick=" opentab('Education')">Education</p>
                     </div>
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>First Goal</span><br> as previously stated i want to learn how to create my own game</li>
                             <li><span>Second Goal</span><br> make my own website, completely on my own</li>
                             <li><span>Third Goal</span><br> create my own app</li>
                         </ul>
-
-
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>First Goal</span><br> as previously stated i want to learn how to create my own game</li>
+                            <li><span>Second Goal</span><br> make my own website, completely on my own</li>
+                            <li><span>Third Goal</span><br> create my own app</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>First Goal</span><br> as previously stated i want to learn how to create my own game</li>
+                            <li><span>Second Goal</span><br> make my own website, completely on my own</li>
+                            <li><span>Third Goal</span><br> create my own app</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+<!-------------servieces------------->
+<div id="Services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-music"></i>
+                <h2>Music</h2>
+                <p> hjujuby</p>
+                <a href="#">learn more </a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>coding</h2>
+                <p> hjujuby</p>
+                <a href="#">learn more </a>
+            </div>
+            <div>
+                <i class="fa-solid fa-gamepad"></i>
+                <h2>gameing</h2>
+                <p> hjujuby</p>
+                <a href="#">learn more </a>
+            </div>
+        </div>
+    </div>
+</div>
 
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classlist.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classlist.remove("active-tab");
+            }
+            event.currentTarget.classlist.add("active-list")
+            document.getElementById(tadname).classList.add("active-tab")
+        }
+
+    </script>
 
 </body>
 </html>

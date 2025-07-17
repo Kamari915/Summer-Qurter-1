@@ -1,52 +1,48 @@
-# the amount of money we have to spend
-funds=2500
-
-# A dictionary of our items we are spanding our items we are spending
+funds = 2500
 budgets = {}
-
-# A dictanary of the expenses of each budged item
 expenses = {}
-
-
-
-#adds an item to the budgets dictanary
-def addBudget(name, amount):
+def addbudget(name, amount):
     global funds
     if name in budgets:
-        raise ValueError("Budget for item alredy exists")
+        raise ValueError("budget for item already exists")
     if amount > funds:
-        raise ValueError("no your to broke")
-
-    budgets[name] = amount 
-    funds-=amount 
+        raise ValueError("HEY!!! DONT YOU GET IT YOU ARE BROKE. GET SOME MONEY PEASENT!!!!:no_entry_sign::dollar::moyai::moyai::moyai::moyai::moyai:")
+    budgets[name] = amount
+    funds -= amount
+    #or funds -= amount
     expenses[name] = 0
     return funds
-
-def spend(name, amount):
-    if name not in expenses:
-        raise ValueError("item not in budget")
-    expenses[name] += amount 
+def Spend(name, amount):
+    if name not in  expenses:
+        raise ValueError("Item not in budget")
+    expenses[name] += amount
     budgeted = budgets[name]
     spent = expenses[name]
     return budgeted - spent
-
-def printBudget():
+def PrintBudget():
+    print("  Budget             budgeted     Spent     Remaining")
+    print("-------------------------------------------------------")
+    totalBudgeted = 0
+    totalSpent = 0
+    totalRemaining = 0
     for name in budgets:
         budgeted = budgets[name]
-        spent= expenses[name]
-        remaningbudget = budgeted - spent
-        print(f'{name:15s}, {budgeted:10.2f}, {spent:10.2f}' 
-              f'{remaningbudget:10.2f}')
-
-
-
-print("Total funds:",funds)
-addBudget("clothes", 200)
-addBudget("money", 500)
-addBudget(" clothes", 300)
-
-spend("clothes",50)
-spend("money", 100)
-spend(" clothes", 200)
-
-printBudget()
+        spent = expenses[name]
+        remainingBuget = budgeted
+        print(f'{name:15s}, {budgeted:10.2f}, {spent:10.2f}, '
+               f'{remainingBuget:10.2f}')
+        totalBudgeted += budgeted
+        totalSpent += spent
+        totalRemaining += remainingBuget
+    print(f'{"Total":15}, {totalBudgeted:10.2f}, {totalSpent:10.2f}, '
+          f'{totalBudgeted - totalSpent:10.2f}')
+print("Total Funds: ", funds)
+addbudget("Games", 60)
+addbudget("Better PC", 1000)
+addbudget("Crunchyroll+", 10)
+addbudget("Rent(Homeless)", 0)
+Spend("Games", 60)
+Spend("Better PC", 200)
+Spend("Crunchyroll+", 10)
+Spend("Rent(Homeless)", 0)
+PrintBudget()
