@@ -1,0 +1,6 @@
+name = input("hi im python what is your name")
+print(f"Hello,"+name + ",its nice to meet you!" )
+Age = input("how old are you") 
+print (f"I now know that you are,"+ name +",and you are,"+ Age+",years old")
+Grade = input("what is your grade in geomatry") 
+print("hello,"+ name+ ",your grade in geomatry is,"+ Grade + "and that you are,"+ Age +", thank you for the information.")
