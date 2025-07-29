@@ -30,7 +30,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/8942.jpg"alt="">
+                    <img src="images/unnamed.jpg"alt="">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -117,58 +117,97 @@
         <div class="work-list">
             <ul>
                 <div class="work">
-                    <li><img src="images/mean.png"></li>
+                    <li><img src="images/images (1).jpeg"></li>
                     <div class="layer">
-                        <h3>Karate</h3>
-                        <p>I did Karate for 5-6 years, long enough for me to
-                            become a brown belt level 3 which is one level from
-                            a black belt</p>
+                        <h3>Coding</h3>
+                        <p>Coding is the process of writing instructions 
+                            that a computer can understand and follow. 
+                            It allows you to create websites, apps, games,
+                             and even control robots. By learning to code, 
+                             you can turn your ideas into real, working technology.
+                              It also builds problem-solving skills and opens up 
+                              endless creative possibilities.</p>
                             <a href="#"><i class="fa-solid fa-trophy"></i></a>
                     </div>
                 </div>
                 <div class="work">
-                <li><img src="images/boom.png"></li>
+                <li><img src="images/Chorus-AI-Logo-Facebook-1420x736-1.png"></li>
                 <div class="layer">
-                        <h3>Sports Experiences</h3>
-                        <p>back in middle school, i was on the basketball team and we were
-                            able to make it all the way too the finals matter of fact we actually
-                            won 1st place
+                        <h3>choir experience</h3>
+                        <p>The San Francisco Boys 
+                            Chorus is a renowned group of young 
+                            male singers who perform in major concerts 
+                            and events. It builds musical skill, confidence, 
+                            and teamwork through professional training and performances.
                         </p>
                             <a href="#"><i class="fa-solid fa-medal"></i></i></a>
                 </div>
                 </div>
-                <div class="work">
-                <li><img src="images/bang.png"></li>
-                <div class="layer">
-                        <h3>Things ive Built</h3>
-                        <p>a while back i helped my dad build a chair, that still stands
-                            (although its too small for me to actually use now), and i
-                            played a rather big part in building the stand for our living
-                            room TV, it has a few cabinet sections that are used as storage
-                        </p>
-                            <a href="#"><i class="fa-solid fa-puzzle-piece"></i></i></a>
-                </div>
-                </div>
+            
+
             </ul>
         </div>
     </div>
 </div>
-
-<script>
-
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab(tabname){
-        for(tablink of tablinks){
-            tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
+<!----------contact-------->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="contact-left" data-aos="fade-right">
+          <h1 class="sub-title">Contact Me</h1>
+          <p><i class="fa-solid fa-paper-plane"></i> Contact kamari.revels@hgs.hiddengeniusproject.org</p>
+          <p><i class="fa-solid fa-phone"></i> 3412030512</p>
+          <div class="social-icons">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/Kamari915/Summer-Qurter-1" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+        <div class="contact-right" data-aos="fade-left">
+          <form action="#">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <textarea placeholder="Message" cols="30" rows="10"></textarea>
+            <button class="btn btn2">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>
+      Copyright &copy; 2024 Kamari Diwight Revels. All Rights Reserved.
+      <i class="fa-solid fa-heart"></i>
+    </p>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+  duration: 1000,
+  once: false,
+});
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu() {
+      sidemenu.style.right = "0";
     }
-</script>
-
+    function closemenu() {
+      sidemenu.style.right = "-200px";
+    }
+    function opentab(tabname) {
+      var i;
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      for (i = 0; i < tabcontents.length; i++) {
+        tabcontents[i].classList.remove("active-tab");
+      }
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active-link");
+      }
+      document.getElementById(tabname).classList.add("active-tab");
+      event.currentTarget.classList.add("active-link");
+    }
+  </script>
 </body>
 </html>
