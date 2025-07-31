@@ -1,0 +1,29 @@
+body {
+    background-color:lavender
+}
+
+img {
+    width:300px;
+    height:300px;
+    display:block;
+    margin:0 auto;
+    text-align:center;
+}
+
+p {
+    font-size:xx-large;
+    color:black;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+}
+
+a {
+    text-align: center;
+    font-size: x-large;
+}
+
+ul {
+    text-align: center;
+}
